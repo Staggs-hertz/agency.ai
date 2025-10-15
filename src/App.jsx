@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 
 const App = () => {
 
-const[theme, setTheme] = useState('light');
+  //Checks if the theme has an assigned value in the localStorage. If not, it is initialized 'light' mode.
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
 
   return (
     <div className='dark:bg-black relative'>
