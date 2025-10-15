@@ -8,6 +8,7 @@ const ThemeToggleBtn = ({theme, setTheme}) => {
   useEffect(() => {
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setTheme(theme || (prefersDarkMode ? 'dark' : 'light'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //useEffect to keep track of the value of theme and add a class to the html tag.

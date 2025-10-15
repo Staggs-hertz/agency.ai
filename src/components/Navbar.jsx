@@ -22,7 +22,7 @@ const Navbar = ({theme, setTheme}) => {
         <img src={assets.close_icon} className='absolute right-4 top-4 w-5 sm:hidden' onClick={() => setSidebarOpen(false)} alt="" />
 
         {/*Menu items*/}
-        <a href="#" onClick={() => setSidebarOpen(false)} className='sm:hover:border-b'>Home</a>
+        <a href="#" onClick={() => setSidebarOpen(false)} className='sm:hover:border-b font-medium'>Home</a>
         <a href="#services" onClick={() => setSidebarOpen(false)} className='sm:hover:border-b'>Services</a>
         <a href="#our-work" onClick={() => setSidebarOpen(false)} className='sm:hover:border-b'>Our Work</a>
         <a href="#contact-us" onClick={() => setSidebarOpen(false)} className='sm:hover:border-b'>Contact Us</a>
