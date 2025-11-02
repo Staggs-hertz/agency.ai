@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustedBySection from './components/TrustedBySection';
 import Services from './components/Services';
+import OurWork from './components/OurWork';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <TrustedBySection />
       <Services />
+      <OurWork />
     </div>
   )
 }
