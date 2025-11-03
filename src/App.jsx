@@ -5,6 +5,9 @@ import TrustedBySection from './components/TrustedBySection';
 import Services from './components/Services';
 import OurWork from './components/OurWork';
 import Teams from './components/Teams';
+import ContactUs from './components/ContactUs';
+import { Toaster } from 'react-hot-toast';
+//react-hot-toast is a library for showing quick, nice-looking popup notifications called toasts.
 
 const App = () => {
 
@@ -13,12 +16,17 @@ const App = () => {
 
   return (
     <div className='dark:bg-black relative'>
+
+      <Toaster />
+      {/* This is a component of the react-hot-toast library that displays and manages all active toasts(notifications) */}
+      
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero />
       <TrustedBySection />
       <Services />
       <OurWork />
       <Teams />
+      <ContactUs />
     </div>
   )
 }
