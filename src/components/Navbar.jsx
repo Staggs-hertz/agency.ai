@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   //useState to control the navigation of the menu-sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70"
+    >
       {/*This creates a responsive sticky navbar with flex layout and supports dark mode*/}
 
       {/*A responsive logo that changes with the theme*/}
@@ -81,7 +87,7 @@ const Navbar = ({ theme, setTheme }) => {
         onClick={() => setSidebarOpen(true)}
         alt=""
       />
-    </div>
+    </motion.div>
   );
 };
 
